@@ -46,7 +46,11 @@ img{
 }
 
 /* NAVBAR */
-   * {
+   body {
+            margin: 0;
+            padding-top: 60px; /* Ensure content does not go under the navbar */
+        }
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
