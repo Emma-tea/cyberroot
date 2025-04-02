@@ -53,7 +53,7 @@ img{
             font-family: 'Poppins', sans-serif;
         }
 
-        .navbar {
+           .navbar {
             position: fixed;
             top: 0;
             width: 100%;
@@ -86,6 +86,9 @@ img{
             display: none;
             font-size: 30px;
             cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
         }
 
         .nav-links {
