@@ -46,17 +46,93 @@ img{
 }
 
 /* NAVBAR */
-.navbar{
-    background-color: #0000a0;
-}
-.navbar .navlink {
-    font-weight: 700;
-    text-decoration: uppercase;
-    color: #fff;
-}
-.navbar .navlink:hover{
-    color: var(--color-brand);
-}
+   .navbar {
+          position: fixed; /* Sticks to the top */
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #0000a0;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 20px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 1000; /* Ensures it's always on top */
+      }
+
+      /* Logo and Brand */
+      .brand {
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: bold;
+      }
+
+      .brand img {
+          width: 50px; /* Adjust logo size */
+          height: auto;
+          margin-right: 10px;
+      }
+
+      /* Navigation Links */
+      .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 20px;
+      }
+
+      .nav-links li {
+          display: inline;
+      }
+
+      .nav-links a {
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+          transition: color 0.3s ease-in-out;
+      }
+
+      .nav-links a:hover {
+          color: #ffcc00; /* Highlight color on hover */
+      }
+
+      /* Mobile Menu Toggle */
+      .menu-toggle {
+          display: none;
+          font-size: 30px;
+          cursor: pointer;
+          color: white;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          .nav-links {
+              display: none;
+              flex-direction: column;
+              position: absolute;
+              top: 60px;
+              left: 0;
+              width: 100%;
+              background-color: #007bff;
+              text-align: center;
+              padding: 10px 0;
+          }
+
+          .nav-links li {
+              padding: 10px 0;
+          }
+
+          .menu-toggle {
+              display: block;
+          }
+
+          /* Show menu when toggled */
+          .nav-links.show {
+              display: flex;
+          }
+      }
+
 /* //NAVBAR */
 
 /* BTN */
