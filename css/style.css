@@ -46,93 +46,93 @@ img{
 }
 
 /* NAVBAR */
-   .navbar {
-          position: fixed; /* Sticks to the top */
-          top: 0;
-          left: 0;
-          width: 100%;
-          background-color: #0000a0;
-          color: white;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 15px 20px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          z-index: 1000; /* Ensures it's always on top */
-      }
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-      /* Logo and Brand */
-      .brand {
-          display: flex;
-          align-items: center;
-          font-size: 18px;
-          font-weight: bold;
-      }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0000a0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-      .brand img {
-          width: 50px; /* Adjust logo size */
-          height: auto;
-          margin-right: 10px;
-      }
+        .brand {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
 
-      /* Navigation Links */
-      .nav-links {
-          list-style: none;
-          display: flex;
-          gap: 20px;
-      }
+        .brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
 
-      .nav-links li {
-          display: inline;
-      }
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
 
-      .nav-links a {
-          text-decoration: none;
-          color: white;
-          font-size: 16px;
-          transition: color 0.3s ease-in-out;
-      }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
 
-      .nav-links a:hover {
-          color: #ffcc00; /* Highlight color on hover */
-      }
+        .nav-links li {
+            margin: 0 15px;
+        }
 
-      /* Mobile Menu Toggle */
-      .menu-toggle {
-          display: none;
-          font-size: 30px;
-          cursor: pointer;
-          color: white;
-      }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
 
-      /* Responsive Design */
-      @media (max-width: 768px) {
-          .nav-links {
-              display: none;
-              flex-direction: column;
-              position: absolute;
-              top: 60px;
-              left: 0;
-              width: 100%;
-              background-color: #007bff;
-              text-align: center;
-              padding: 10px 0;
-          }
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
 
-          .nav-links li {
-              padding: 10px 0;
-          }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
 
-          .menu-toggle {
-              display: block;
-          }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #0000a0;
+                text-align: center;
+                padding: 10px 0;
+            }
 
-          /* Show menu when toggled */
-          .nav-links.show {
-              display: flex;
-          }
-      }
+            .nav-links li {
+                margin: 10px 0;
+            }
 
+            .nav-links.active {
+                display: flex;
+            }
+        }
 /* //NAVBAR */
 
 /* BTN */
