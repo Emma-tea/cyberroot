@@ -16,7 +16,13 @@ AOS.init({
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
   }
-   
+
+
+ function toggleMenu() {
+            var navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+
   document.addEventListener('DOMContentLoaded', () => {
     ScrollReveal().reveal('.reveal', {
       distance: '20px',
