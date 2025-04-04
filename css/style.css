@@ -46,94 +46,92 @@ img{
 }
 
 /* NAVBAR */
-  /* Reset default margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
-}
+ .navbar {
+          position: fixed; /* Sticks to the top */
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #007bff;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 20px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 1000; /* Ensures it's always on top */
+      }
 
-.navbar {
-    background-color: #0000a0; /* Navy Blue */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
+      /* Logo and Brand */
+      .brand {
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: bold;
+      }
 
-.brand {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-}
+      .brand img {
+          width: 50px; /* Adjust logo size */
+          height: auto;
+          margin-right: 10px;
+      }
 
-.brand img {
-    height: 40px;
-    margin-right: 10px;
-}
+      /* Navigation Links */
+      .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 20px;
+      }
 
-.menu-toggle {
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-    color: white;
-}
+      .nav-links li {
+          display: inline;
+      }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
+      .nav-links a {
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+          transition: color 0.3s ease-in-out;
+      }
 
-.nav-links li {
-    margin: 0;
-}
+      .nav-links a:hover {
+          color: #ffcc00; /* Highlight color on hover */
+      }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    transition: background 0.3s;
-}
+      /* Mobile Menu Toggle */
+      .menu-toggle {
+          display: none;
+          font-size: 30px;
+          cursor: pointer;
+          color: white;
+      }
 
-.nav-links a:hover {
-    background-color: #000080; /* Darker navy */
-}
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          .nav-links {
+              display: none;
+              flex-direction: column;
+              position: absolute;
+              top: 60px;
+              left: 0;
+              width: 100%;
+              background-color: #007bff;
+              text-align: center;
+              padding: 10px 0;
+          }
 
-/* Responsive Menu */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+          .nav-links li {
+              padding: 10px 0;
+          }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #0000a0;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
+          .menu-toggle {
+              display: block;
+          }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-        width: 100%;
-    }
-}
-
+          /* Show menu when toggled */
+          .nav-links.show {
+              display: flex;
+          }
+      }
 /* //NAVBAR */
 
 /* BTN */
