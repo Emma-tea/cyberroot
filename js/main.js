@@ -12,21 +12,13 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
-  function toggleMenu() {
-            var navLinks = document.getElementById("nav-links");
-            if (navLinks.style.display === "flex") {
-                navLinks.style.display = "none";
-            } else {
-                navLinks.style.display = "flex";
-                navLinks.style.flexDirection = "column";
-            }
-        }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    ScrollReveal().reveal('.reveal', {
-      distance: '20px',
-      duration: 600,
-      easing: 'ease-out',
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+}
+
+
+
       origin: 'bottom',
       opacity: 0
     });
