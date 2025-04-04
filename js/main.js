@@ -13,10 +13,7 @@ AOS.init({
 
 });
 
-function toggleMenu() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('active');
-    }
+
 
 
   window.addEventListener("scroll", function() {
@@ -34,3 +31,20 @@ window.addEventListener("scroll", function() {
       element.classList.add("active");
   }
 });
+
+
+
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('nav-links');
+        
+        toggle.addEventListener('click', function() {
+            menu.classList.toggle('active');
+        });
+    });
+
+
+
+
