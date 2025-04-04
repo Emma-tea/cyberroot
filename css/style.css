@@ -46,91 +46,89 @@ img{
 }
 
 /* NAVBAR */
- .navbar {
-          position: fixed; /* Sticks to the top */
-          top: 0;
-          left: 0;
-          width: 100%;
-          background-color: #0000a0;
-          color: white;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          z-index: 1000; /* Ensures it's always on top */
-      }
-
-      /* Logo and Brand */
-      .brand {
-          display: flex;
-          align-items: center;
-          font-size: 18px;
-          font-weight: bold;
-      }
-
-      .brand img {
-          width: 50px; /* Adjust logo size */
-          height: auto;
-          margin-right: 10px;
-      }
-
-      /* Navigation Links */
-      .nav-links {
-          list-style: none;
-          display: flex;
-          gap: 20px;
-      }
-
-      .nav-links li {
-          display: inline;
-      }
-
-      .nav-links a {
-          text-decoration: none;
-          color: white;
-          font-size: 16px;
-          transition: color 0.3s ease-in-out;
-      }
-
-      .nav-links a:hover {
-          color: #ffcc00; /* Highlight color on hover */
-      }
-
-      /* Mobile Menu Toggle */
-      .menu-toggle {
-          display: none;
-          font-size: 30px;
-          cursor: pointer;
-          color: white;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-          .nav-links {
-              display: none;
-              flex-direction: column;
-              position: absolute;
-              top: 60px;
-              left: 0;
-              width: 100%;
-              background-color: #007bff;
-              text-align: center;
-              padding: 10px 0;
-          }
-
-          .nav-links li {
-              padding: 10px 0;
-          }
-
-          .menu-toggle {
-              display: block;
-          }
-
-          /* Show menu when toggled */
-          .nav-links.show {
-              display: flex;
-          }
-      }
+ /* Reset some default styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .navbar {
+        background-color: #0000a0;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: relative;
+    }
+    
+    .brand {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    .brand img {
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+    
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+    
+    .nav-links li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
+    
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+        
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #0000a0;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0;
+            display: none;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+        
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .nav-links li a {
+            padding: 1rem;
+        }
+    }
 /* //NAVBAR */
 
 /* BTN */
