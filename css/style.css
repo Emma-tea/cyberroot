@@ -46,7 +46,7 @@ img{
 }
 
 /* NAVBAR */
- /* Reset some default styles */
+/* Reset some default styles */
     * {
         margin: 0;
         padding: 0;
@@ -73,9 +73,8 @@ img{
     .brand img {
         height: 40px;
         width: 40px;
-        object-fit: cover;
+        object-fit: contain;
         margin-right: 10px;
-        border-radius: 4px; 
     }
     
     .nav-links {
@@ -117,6 +116,7 @@ img{
             align-items: center;
             padding: 1rem 0;
             display: none;
+            z-index: 1000; /* Ensure it appears above other content */
         }
         
         .nav-links.active {
