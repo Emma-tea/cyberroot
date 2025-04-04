@@ -14,28 +14,6 @@ AOS.init({
 });
 
 
-
-
-  window.addEventListener("scroll", function() {
-    console.log("Scrolling detected!"); // Check if this appears in the console
-});
-
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return rect.top < window.innerHeight && rect.bottom > 0;
-}
-
-window.addEventListener("scroll", function() {
-  let element = document.querySelector(".animate");
-  if (isInViewport(element)) {
-      element.classList.add("active");
-  }
-});
-
-
-
-
-
  document.addEventListener('DOMContentLoaded', function() {
         const toggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('nav-links');
