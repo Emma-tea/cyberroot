@@ -13,16 +13,11 @@ AOS.init({
 
 });
 
-function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("active");
+
+  function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("show");
 }
 
-
-
-      origin: 'bottom',
-      opacity: 0
-    });
-  });
 
   window.addEventListener("scroll", function() {
     console.log("Scrolling detected!"); // Check if this appears in the console
