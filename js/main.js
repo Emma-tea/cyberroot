@@ -15,14 +15,22 @@ AOS.init({
 
 
  document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('nav-links');
-        
-        toggle.addEventListener('click', function() {
-            menu.classList.toggle('active');
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('navLinks');
+            
+            // Toggle menu when clicking the hamburger
+            toggle.addEventListener('click', function() {
+                menu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link (optional)
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        menu.classList.remove('active');
+                    }
+                });
+            });
         });
-    });
-
-
 
 
