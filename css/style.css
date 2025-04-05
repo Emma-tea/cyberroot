@@ -390,7 +390,6 @@ h2 {
   .whatsapp-btn {
       font-size: 30px;
       color: #25D366;
-      background: rgba(255, 255, 255, 0.1);
       padding: 15px;
       transition: transform 0.3s ease, background 0.3s ease;
   }
