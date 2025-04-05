@@ -391,7 +391,7 @@ h2 {
       font-size: 30px;
       color: #25D366;
       padding: 15px;
-      transition: transform 0.3s ease, background 0.3s ease;
+      transition: transform 0.3s ease;
   }
 
   .whatsapp-btn:hover {
@@ -402,7 +402,7 @@ h2 {
   @media (max-width: 768px) {
       .contact-section {
           padding: 30px;
-          max-width: 95%; /* Allows better fit on smaller screens */
+          max-width: 95%; 
       }
 
       .whatsapp-btn {
